@@ -8,7 +8,7 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
-public class BBS
+public class BBSUrlFetcher
 {
 	private static int PO_NUM = 20;
 	private static String BBS_ALL_URL = "http://bbs.fudan.edu.cn/bbs/all";
@@ -28,7 +28,7 @@ public class BBS
 	static void usage()
 	{
 		System.err.print("Usage: ");
-		System.err.print(BBS.class.getName() + " ");
+		System.err.print(BBSUrlFetcher.class.getName() + " ");
 		System.err.print("[output_path]");
 		System.exit(1);
 	}
@@ -43,6 +43,8 @@ public class BBS
 		Document bbs_all_doc = Jsoup.connect(BBS_ALL_URL).get();
 		Elements all_brd = bbs_all_doc.getElementsByTag(BRD);
 		long start_time = System.currentTimeMillis();
+		long total_sum = 0;
+		long sticky_sum = 0;
 		for (int brd_index = 0; brd_index < all_brd.size(); brd_index++)
 		{
 			Element brd = all_brd.get(brd_index);
@@ -66,11 +68,14 @@ public class BBS
 			Element secondary_brd = secondary_brds.get(0);
 			String bid = secondary_brd.attr(BID);
 			int total = Integer.parseInt(secondary_brd.attr(TOTAL));
+			total_sum += total;
 			int start = 1;
 
 			System.out.print("Fetching brd_title=" + brd_title + ",bid=" + bid
-					+ ",total=" + total + ",spend=");
+					+ ",total=" + total + ",sticky=");
 			long start_brd_time = System.currentTimeMillis();
+
+			// from the first page
 			while (start + PO_NUM <= total)
 			{
 				String brd_url = BRD_PRE_URL + bid + AND_START + start;
@@ -88,11 +93,16 @@ public class BBS
 				start += PO_NUM;
 			}
 
-			// last
+			// last page
 			String brd_url = BRD_PRE_URL + bid + AND_START + start;
 			Document brd_doc = Jsoup.connect(brd_url).get();
 			Elements all_po = brd_doc.getElementsByTag(PO);
-			for (int po_index = PO_NUM - 1 - (total - start); po_index < PO_NUM; po_index++)
+			int sticky = all_po.size() - PO_NUM;
+			sticky_sum += sticky;
+			System.out.print(sticky + ",spend=");
+			// pick up sticky po
+			for (int po_index = PO_NUM - 1 - (total - start); po_index < all_po
+					.size(); po_index++)
 			{
 				Element po = all_po.get(po_index);
 				String id = po.attr(ID);
@@ -108,6 +118,8 @@ public class BBS
 		}
 		long end_time = System.currentTimeMillis();
 		double seconds = (end_time - start_time) / 1000.;
+		System.out.print("all total:" + total_sum + ",");
+		System.out.print("all sticky:" + sticky_sum + ",");
 		System.out.println("all spend:" + seconds + "s");
 		fw.close();
 	}
