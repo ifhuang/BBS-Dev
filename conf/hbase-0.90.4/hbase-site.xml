@@ -42,4 +42,8 @@
                 <name>hbase.zookeeper.property.clientPort</name>  
                 <value>2181</value>  
         </property>
+        <property>
+                <name>dfs.support.append</name>
+                <value>true</value>
+        </property>
 </configuration>
