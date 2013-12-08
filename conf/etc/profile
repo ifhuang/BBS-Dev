@@ -1,0 +1,43 @@
+# /etc/profile: system-wide .profile file for the Bourne shell (sh(1))
+# and Bourne compatible shells (bash(1), ksh(1), ash(1), ...).
+
+if [ "$PS1" ]; then
+  if [ "$BASH" ] && [ "$BASH" != "/bin/sh" ]; then
+    # The file bash.bashrc already sets the default PS1.
+    # PS1='\h:\w\$ '
+    if [ -f /etc/bash.bashrc ]; then
+      . /etc/bash.bashrc
+    fi
+  else
+    if [ "`id -u`" -eq 0 ]; then
+      PS1='# '
+    else
+      PS1='$ '
+    fi
+  fi
+fi
+
+# The default umask is now handled by pam_umask.
+# See pam_umask(8) and /etc/login.defs.
+
+if [ -d /etc/profile.d ]; then
+  for i in /etc/profile.d/*.sh; do
+    if [ -r $i ]; then
+      . $i
+    fi
+  done
+  unset i
+fi
+
+export JAVA_HOME=/usr/jdk1.6.0_25
+export CLASSPATH=.:$CLASSPATH:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar:$JAVA_HOME/lib:/home/wzc/java/jars/commons-io-2.4.jar
+export PATH=$PATH:$JAVA_HOME/bin
+
+export HADOOP_INSTALL=/usr/yifu/hadoop-1.2.1
+export PATH=$PATH:$HADOOP_INSTALL/bin
+
+export HBASE_HOME=/usr/yifu/hbase-0.90.4
+export PATH=$PATH:$HBASE_HOME/bin
+
+export NUTCH_HOME=/usr/yifu/apache-nutch-2.2.1
+export PATH=$PATH:$NUTCH_HOME/runtime/deploy/bin

@@ -1,0 +1,35 @@
+10.171.5.150    hadoop-1        # Added by NetworkManager
+127.0.0.1       localhost.localdomain   localhost
+::1     hadoop-1        localhost6.localdomain6 localhost6
+10.171.5.149 hadoop-2
+10.171.5.148 hadoop-3
+10.171.5.147 hadoop-4
+10.171.5.146 hadoop-5
+10.171.5.145 hadoop-6
+10.171.5.144 hadoop-7
+10.171.5.143 hadoop-8
+10.171.5.142 hadoop-9
+10.171.5.141 hadoop-10
+10.171.5.140 hadoop-11
+10.171.5.139 hadoop-12
+10.171.5.138 hadoop-13
+10.171.5.137 hadoop-14
+10.171.5.136 hadoop-15
+10.171.5.135 hadoop-16
+10.171.5.134 hadoop-17
+10.171.5.133 hadoop-18
+10.171.5.132 hadoop-19
+10.171.5.131 hadoop-20
+10.171.5.130 hadoop-21
+10.171.5.129 hadoop-22
+10.171.5.128 hadoop-23
+10.171.5.127 hadoop-24
+10.171.5.126 hadoop-25
+10.171.5.125 hadoop-26
+10.171.5.124 hadoop-27
+10.171.5.123 hadoop-28
+10.171.5.122 hadoop-29
+10.171.5.121 hadoop-30
+10.171.5.120 hadoop-31
+10.171.5.119 hadoop-32
+10.171.5.150 hadoop-1
