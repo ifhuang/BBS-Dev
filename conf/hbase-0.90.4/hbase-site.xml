@@ -46,4 +46,8 @@
                 <name>dfs.support.append</name>
                 <value>true</value>
         </property>
+        <property>  
+                <name>hbase.tmp.dir</name>  
+                <value>/usr/yifu/tmp/hbase-${user.name}</value>  
+        </property>
 </configuration>
