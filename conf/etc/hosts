@@ -1,6 +1,6 @@
-10.171.5.150    hadoop-1        # Added by NetworkManager
-127.0.0.1       localhost.localdomain   localhost
-::1     hadoop-1        localhost6.localdomain6 localhost6
+127.0.0.1 localhost.localdomain localhost
+::1 localhost6.localdomain6 localhost6
+10.171.5.150 hadoop-1
 10.171.5.149 hadoop-2
 10.171.5.148 hadoop-3
 10.171.5.147 hadoop-4
@@ -32,4 +32,3 @@
 10.171.5.121 hadoop-30
 10.171.5.120 hadoop-31
 10.171.5.119 hadoop-32
-10.171.5.150 hadoop-1
