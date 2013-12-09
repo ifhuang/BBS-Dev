@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+
+<!-- Put site-specific property overrides in this file. -->
+
+<configuration>
+	<property>
+		 <name>storage.data.store.class</name>
+		 <value>org.apache.gora.hbase.store.HBaseStore</value>
+	</property>
+	<property>
+		<name>http.agent.name</name>
+		<value>friend</value>
+	</property>
+	<property>
+		<name>parser.character.encoding.default</name>
+		<value>utf-8</value>
+	</property>
+	<property>
+		<name>http.accept.language</name>
+		<value>zh-cn,ja-jp,en-us,en-gb,en;q=0.7,*;q=0.3</value>
+	</property>
+	<property>
+		<name>http.robots.agents</name>
+		<value>friend</value>
+	</property>	
+</configuration>
