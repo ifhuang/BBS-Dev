@@ -24,4 +24,12 @@
 		<name>http.robots.agents</name>
 		<value>friend</value>
 	</property>	
+	<property>
+  		<name>fetcher.server.delay</name>
+  		<value>0.0</value>
+  	</property>
+  	<property>
+		<name>fetcher.threads.per.queue</name>
+		<value>50</value>
+	</property>
 </configuration>
