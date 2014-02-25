@@ -36,7 +36,7 @@
         </property>
         <property>
                 <name>hbase.zookeeper.property.dataDir</name>
-                <value>/usr/yifu/tmp/zookeeper-${user.name}</value>
+                <value>/home/${user.name}/yifu/zookeeper-${user.name}</value>
         </property>
         <property>  
                 <name>hbase.zookeeper.property.clientPort</name>  
@@ -48,7 +48,7 @@
         </property>
         <property>  
                 <name>hbase.tmp.dir</name>  
-                <value>/usr/yifu/tmp/hbase-${user.name}</value>  
+                <value>/home/${user.name}/yifu/hbase-${user.name}</value>  
         </property>
                 <property>
                 <name>hbase.zookeeper.property.maxClientCnxns</name>

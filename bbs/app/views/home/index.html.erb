@@ -41,8 +41,8 @@
       <!-- Example row of columns -->
       <div class="row">
       <% @docs.each do |doc| %>
-        <div class="col-md-4">
-          <p><%= doc["content"][0,500] =%></p>
+        <div class="col-md-12">
+          <p><%= doc["content"] =%></p>
           <p><a class="btn btn-default" href= <%= doc["url"] =%> role="button">原帖 &raquo;</a></p>
         </div>
       <% end %>
@@ -51,7 +51,7 @@
       <hr>
 
       <footer>
-        <p>&copy; <a href="http://ifhuang.drivehq.com">If</a></p>
+        <p>&copy; <a href="http://admis.fudan.edu.cn/~yfhuang">If</a></p>
       </footer>
     </div> <!-- /container -->
 

@@ -10,6 +10,6 @@
 	</property>
 	<property>
 		<name>hadoop.tmp.dir</name>
-		<value>/usr/yifu/tmp/hadoop-${user.name}</value>
+		<value>/home/${user.name}/yifu/hadoop-${user.name}</value>
 	</property>
 </configuration>
