@@ -1,0 +1,31 @@
+#!/bin/bash
+
+ssh hadoop@hadoop-4 rm -r /usr/yifu/tmp
+ssh hadoop@hadoop-5 rm -r /usr/yifu/tmp
+ssh hadoop@hadoop-6 rm -r /usr/yifu/tmp
+ssh hadoop@hadoop-7 rm -r /usr/yifu/tmp
+ssh hadoop@hadoop-8 rm -r /usr/yifu/tmp
+ssh hadoop@hadoop-9 rm -r /usr/yifu/tmp
+ssh hadoop@hadoop-10 rm -r /usr/yifu/tmp
+ssh hadoop@hadoop-11 rm -r /usr/yifu/tmp
+ssh hadoop@hadoop-12 rm -r /usr/yifu/tmp
+ssh hadoop@hadoop-13 rm -r /usr/yifu/tmp
+ssh hadoop@hadoop-14 rm -r /usr/yifu/tmp
+ssh hadoop@hadoop-15 rm -r /usr/yifu/tmp
+ssh hadoop@hadoop-16 rm -r /usr/yifu/tmp
+ssh hadoop@hadoop-17 rm -r /usr/yifu/tmp
+ssh hadoop@hadoop-18 rm -r /usr/yifu/tmp
+ssh hadoop@hadoop-19 rm -r /usr/yifu/tmp
+ssh hadoop@hadoop-20 rm -r /usr/yifu/tmp
+ssh hadoop@hadoop-21 rm -r /usr/yifu/tmp
+ssh hadoop@hadoop-22 rm -r /usr/yifu/tmp
+ssh hadoop@hadoop-23 rm -r /usr/yifu/tmp
+ssh hadoop@hadoop-24 rm -r /usr/yifu/tmp
+ssh hadoop@hadoop-25 rm -r /usr/yifu/tmp
+ssh hadoop@hadoop-26 rm -r /usr/yifu/tmp
+ssh hadoop@hadoop-27 rm -r /usr/yifu/tmp
+ssh hadoop@hadoop-28 rm -r /usr/yifu/tmp
+ssh hadoop@hadoop-29 rm -r /usr/yifu/tmp
+ssh hadoop@hadoop-30 rm -r /usr/yifu/tmp
+ssh hadoop@hadoop-31 rm -r /usr/yifu/tmp
+ssh hadoop@hadoop-32 rm -r /usr/yifu/tmp

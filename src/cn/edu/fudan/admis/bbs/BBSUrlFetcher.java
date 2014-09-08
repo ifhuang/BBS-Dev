@@ -1,8 +1,6 @@
-package edu.fudan.iipl.bbs;
+package cn.edu.fudan.admis.bbs;
 
 import java.io.FileWriter;
-import java.io.IOException;
-
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -33,7 +31,7 @@ public class BBSUrlFetcher
 		System.exit(1);
 	}
 
-	public static void main(String[] args) throws IOException
+	public static void main(String[] args) throws Exception
 	{
 		if (args.length != 1)
 		{
@@ -56,6 +54,7 @@ public class BBSUrlFetcher
 			String brd_title = brd.attr(TITLE);
 			String brd_last_url = BRD_LAST_PRE_URL + brd_title;
 
+			Thread.sleep(1000);
 			Document brd_last_doc = Jsoup.connect(brd_last_url).get();
 			// secondary_brd.size() == 1
 			Elements secondary_brds = brd_last_doc.getElementsByTag(BRD);
@@ -78,8 +77,10 @@ public class BBSUrlFetcher
 			// from the first page
 			while (start + PO_NUM <= total)
 			{
+				Thread.sleep(1000);
 				String brd_url = BRD_PRE_URL + bid + AND_START + start;
 				Document brd_doc = Jsoup.connect(brd_url).get();
+				System.out.println(brd_url);
 				Elements all_po = brd_doc.getElementsByTag(PO);
 				// ignore sticky po
 				for (int po_index = 0; po_index < PO_NUM; po_index++)
@@ -95,6 +96,7 @@ public class BBSUrlFetcher
 
 			// last page
 			String brd_url = BRD_PRE_URL + bid + AND_START + start;
+			Thread.sleep(1000);
 			Document brd_doc = Jsoup.connect(brd_url).get();
 			Elements all_po = brd_doc.getElementsByTag(PO);
 			int sticky = all_po.size() - PO_NUM;
