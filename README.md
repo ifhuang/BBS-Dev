@@ -1,14 +1,20 @@
-Slide:  
-http://admis.fudan.edu.cn/~yfhuang/files/BSE_slide.pdf
+# BBS-Dev
+A scalable search engine solution of Fudan BBS implemented in Hadoop/HBase/Nutch/Solr/Rails/Bootstrap.
 
-Report_ZH:  
-http://admis.fudan.edu.cn/~yfhuang/files/BSE_report_ZH.pdf
+[Slide](http://admis.fudan.edu.cn/~yfhuang/files/BSE_slide.pdf)
 
-References:  
-1. Fudan BBS: http://bbs.fudan.edu.cn/  
-2. Hadoop: http://hadoop.apache.org/  
-3. HBase: http://hbase.apache.org/  
-4. Nutch: http://nutch.apache.org/  
-5. Solr: http://lucene.apache.org/solr/  
-6. Ruby on Rails: http://guides.rubyonrails.org/  
-7. bootstrap: http://getbootstrap.com/  
+[Report (Chinese Version)](http://admis.fudan.edu.cn/~yfhuang/files/BSE_report_ZH.pdf)
+
+[Fudan BBS](http://bbs.fudan.edu.cn/)
+
+[Hadoop](http://hadoop.apache.org/)
+
+[HBase](http://hbase.apache.org/)
+
+[Nutch](http://nutch.apache.org/)
+
+[Solr](http://lucene.apache.org/solr/)
+
+[Ruby on Rails](http://guides.rubyonrails.org/)
+
+[Bootstrap](http://getbootstrap.com/)
