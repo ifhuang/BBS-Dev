@@ -1,9 +1,9 @@
 # BBS-Dev
 A scalable search engine solution of Fudan BBS implemented in Hadoop/HBase/Nutch/Solr/Rails/Bootstrap.
 
-[Slide](http://admis.fudan.edu.cn/~yfhuang/files/BSE_slide.pdf)
+[Slide](https://github.com/ifhuang/BBS-Dev/blob/master/BSE_slide.pdf)
 
-[Report (Chinese Version)](http://admis.fudan.edu.cn/~yfhuang/files/BSE_report_ZH.pdf)
+[Report (Chinese Version)](https://github.com/ifhuang/BBS-Dev/blob/master/BSE_report_ZH.pdf)
 
 [Fudan BBS](http://bbs.fudan.edu.cn/)
 
